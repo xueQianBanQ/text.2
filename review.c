@@ -273,3 +273,66 @@
 //	printf("%d\n", ret);
 //	return 0;
 //}
+
+
+
+
+
+//            malloc  calloc  realloc  
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int* a;
+//	//a = (int*)malloc(5 * sizeof(int));
+//	a = (int*)calloc(5, sizeof(int));
+//	int i = 0;
+//	/*for (i = 0; i < 5; i++)
+//	{
+//		a[i] = i;
+//	}*/
+//	int* ptr = (int*)realloc(a, 10 * sizeof(int));
+//	if (ptr != NULL)
+//	{
+//		a = ptr;
+//	}
+//	else
+//	{
+//		printf("存储已满\n");
+//		return;   
+//	}
+//	for (i = 5; i < 10; i++)
+//	{
+//		*(a + i) = i;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//	free(a);
+//	a = NULL;
+//	return 0;
+//}
+
+
+////                       文件处理
+//#include <stdio.h>
+//#include <errno.h>
+//#include <string.h>
+//int main()
+//{
+//	FILE* fp = fopen("t.txt", "w+");
+//	if (fp == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	fprintf(fp, "%s\n", "nan tong da xue");
+//	char str[20];
+//	rewind(fp);
+//	fgets(str, 20, fp);
+//	printf("%s\n", str);
+//	fclose(fp);
+//	fp = NULL;
+//}
